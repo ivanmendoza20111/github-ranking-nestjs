@@ -11,7 +11,7 @@ export class AppController {
   }
 
   @Get('/github-ranking/:n/:l')
-  async readCsv(@Param('n') n: number, @Param('l') l: string) {
+  async getGithubRanking(@Param('n') n: number, @Param('l') l: string) {
     return await this.appService.readGithubRanking(n, l);
   }
 }
