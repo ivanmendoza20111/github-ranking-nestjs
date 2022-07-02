@@ -9,7 +9,16 @@ export class AppService {
     return 'Hello World!';
   }
 
-  async readGithubRanking(n: number = 2, l: string = 'JavaScript') {
+  /**
+   * Function receive n = count and l = languages and return Promise with quantity Github Ranking
+   * @param n
+   * @param l
+   * @returns Promise
+   */
+  async readGithubRanking(
+    n: number = 2,
+    l: string = 'JavaScript',
+  ): Promise<any> {
     const results = [];
     let count: number = 0;
     return new Promise((resolve, reject) =>

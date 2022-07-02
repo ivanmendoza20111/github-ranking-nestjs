@@ -11,7 +11,10 @@ export class AppController {
   }
 
   @Get('/github-ranking/:n/:l')
-  async getGithubRanking(@Param('n') n: number, @Param('l') l: string) {
+  async getGithubRanking(
+    @Param('n') n: number,
+    @Param('l') l: string,
+  ): Promise<any> {
     return await this.appService.readGithubRanking(n, l);
   }
 }
